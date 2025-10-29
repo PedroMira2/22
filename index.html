@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Redirecionando…</title>
+
+  <!-- Meta refresh como fallback (5 segundos) -->
+  <meta http-equiv="refresh" content="5;url=https://1drv.ms/b/c/1ed0489c93f5ab8d/EUkcmhMzS65Jrvr0Porgo-YBfKccLTazTflRJKM16z3TCA?e=koaZek">
+
+  <style>
+    body { margin:0; font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif; background:#0b0b0b; color:#e9e5df; display:flex; align-items:center; justify-content:center; height:100vh; }
+    .card { background:#0f0f0f; border:1px solid rgba(212,175,55,0.12); padding:24px; border-radius:10px; width:92%; max-width:520px; text-align:center; box-shadow:0 8px 30px rgba(0,0,0,0.6); }
+    .brand { color:#d4af37; font-weight:700; font-size:18px; display:block; margin-bottom:8px; }
+    h1 { margin:6px 0 12px; font-size:18px; color:#fff; }
+    p { margin:0 0 14px; color:#bfb6ab; }
+    .btn { background:#d4af37; color:#0b0b0b; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:600; display:inline-block; }
+    .muted { font-size:13px; color:#9d958b; margin-top:12px; }
+  </style>
+</head>
+<body>
+  <div class="card" role="main" aria-live="polite">
+    <span class="brand">Pedro Mira</span>
+    <h1>Redirecionando para o comprovante</h1>
+    <p>Se não fores redirecionado automaticamente, clica no botão abaixo.</p>
+
+    <a id="fallback" class="btn" href="https://1drv.ms/b/c/1ed0489c93f5ab8d/EUkcmhMzS65Jrvr0Porgo-YBfKccLTazTflRJKM16z3TCA?e=koaZek" target="_blank" rel="noopener noreferrer">Abrir comprovante</a>
+
+    <div class="muted">Aguarda um momento…</div>
+  </div>
+
+  <script>
+    // Redirecionamento imediato via JavaScript (mais confiável que apenas meta refresh)
+    (function() {
+      const target = "https://1drv.ms/b/c/1ed0489c93f5ab8d/EUkcmhMzS65Jrvr0Porgo-YBfKccLTazTflRJKM16z3TCA?e=koaZek";
+      // Tenta abrir numa nova aba; se bloqueado, faz redirect na mesma aba
+      try {
+        const w = window.open(target, '_blank');
+        if (!w) {
+          window.location.href = target;
+        }
+      } catch (e) {
+        window.location.href = target;
+      }
+    })();
+  </script>
+</body>
+</html>
